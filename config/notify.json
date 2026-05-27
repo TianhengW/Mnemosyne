@@ -1,0 +1,23 @@
+{
+  "push_schedule": {
+    "morning_papers": "08:30",
+    "deadline_check": "09:00",
+    "evening_summary": "21:00"
+  },
+  "enabled_types": {
+    "daily_papers": true,
+    "deadline_alert": true,
+    "work_complete": true,
+    "weekly_report": true
+  },
+  "topics": [
+    "world model",
+    "concept reasoning",
+    "VLM reasoning",
+    "reinforcement learning reasoning",
+    "test-time training",
+    "self-evolving agent",
+    "latent reasoning",
+    "vision language action"
+  ]
+}

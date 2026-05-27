@@ -1,0 +1,5 @@
+{
+  "poll_interval_minutes": 30,
+  "auto_structure": true,
+  "notify_on_new": true
+}

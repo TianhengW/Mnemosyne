@@ -1,0 +1,31 @@
+# Secrets and credentials
+.env
+config/.feishu-poll-state.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
+
+# Cache and data (generated at runtime)
+*.db
+*.sqlite
+
+# Logs
+*.log
+*.err
