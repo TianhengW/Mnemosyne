@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-macOS-blue?style=flat-square&logo=apple" />
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=flat-square&logo=python" />
-  <img src="https://img.shields.io/badge/MCP_Tools-35-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/MCP_Tools-43-green?style=flat-square" />
   <img src="https://img.shields.io/badge/Skills-31-purple?style=flat-square" />
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" />
 </p>
@@ -20,7 +20,7 @@ A comprehensive personal research digital-twin system built on Claude Code + MCP
 
 ```
 PA/
-├── mcp-servers/                  # MCP Server Cluster (8 independent services)
+├── mcp-servers/                  # MCP Server Cluster (9 independent services)
 │   ├── zotero-server/            #   Zotero library interface
 │   ├── obsidian-server/          #   Obsidian notes interface
 │   ├── arxiv-server/             #   arXiv + HuggingFace paper tracking
@@ -28,6 +28,7 @@ PA/
 │   ├── proactive-server/         #   Deadline tracking + progress checks
 │   ├── notify-server/            #   WeChat push (ServerChan)
 │   ├── research-engine-server/   #   Research engine (35 tools)
+│   ├── notion-server/            #   Notion knowledge base (bidirectional)
 │   └── feishu-server/            #   Feishu/Lark meeting notes integration
 ├── scripts/                      # Standalone scripts (launchd scheduled)
 │   ├── screen-monitor.py         #   Screen monitoring daemon
@@ -56,6 +57,7 @@ PA/
 | ✍️ **Writing & Submission** | Writing progress tracking, submission pipeline, deadline dashboard | LaTeX parsing, SM pipeline |
 | 📱 **Push Notifications** | WeChat scheduled push, paper recommendations, evening review | ServerChan API, launchd |
 | 🤝 **Collaboration** | Feishu meeting notes, action items tracking | Feishu Open API |
+| 📓 **Knowledge Base** | Notion bidirectional sync, search, create, query databases | Notion API |
 
 ---
 
@@ -518,6 +520,22 @@ bash scripts/install.sh --uninstall # Uninstall all services
 | 33 | `knowledge_graph_build` | Build knowledge graph |
 | 34 | `knowledge_graph_query` | Query knowledge graph |
 | 35 | `knowledge_graph_gaps` | Knowledge gap detection |
+
+</details>
+
+<details>
+<summary><b>Notion Server — Full List</b></summary>
+
+| # | Tool | Description |
+|---|------|-------------|
+| 1 | `notion_search` | Full-text search pages and databases |
+| 2 | `notion_get_page` | Get page properties and body content |
+| 3 | `notion_get_database` | Get database schema and entries |
+| 4 | `notion_create_page` | Create new page (supports Markdown) |
+| 5 | `notion_update_page` | Append content to existing page |
+| 6 | `notion_list_databases` | List all accessible databases |
+| 7 | `notion_query_database` | Query database with filters and sorts |
+| 8 | `notion_list_pages` | List pages from database or all |
 
 </details>
 

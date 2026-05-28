@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-macOS-blue?style=flat-square&logo=apple" />
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=flat-square&logo=python" />
-  <img src="https://img.shields.io/badge/MCP_Tools-35-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/MCP_Tools-43-green?style=flat-square" />
   <img src="https://img.shields.io/badge/Skills-31-purple?style=flat-square" />
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" />
 </p>
@@ -18,7 +18,7 @@
 
 ```
 PA/
-├── mcp-servers/                  # MCP Server 集群（8 个独立服务）
+├── mcp-servers/                  # MCP Server 集群（9 个独立服务）
 │   ├── zotero-server/            #   Zotero 文献库接口
 │   ├── obsidian-server/          #   Obsidian 笔记接口
 │   ├── arxiv-server/             #   arXiv + HuggingFace 论文追踪
@@ -26,6 +26,7 @@ PA/
 │   ├── proactive-server/         #   Deadline 追踪 + 进度检查
 │   ├── notify-server/            #   微信推送（Server酱）
 │   ├── research-engine-server/   #   研究引擎（35 个 tools）
+│   ├── notion-server/            #   Notion 知识库（双向同步）
 │   └── feishu-server/            #   飞书会议纪要集成
 ├── scripts/                      # 独立脚本（launchd 调度）
 │   ├── screen-monitor.py         #   屏幕监控守护进程
@@ -54,6 +55,7 @@ PA/
 | ✍️ **写作投稿** | 写作进度追踪、投稿管线、Deadline 仪表盘 | LaTeX 解析, SM pipeline |
 | 📱 **推送通知** | 微信定时推送、论文推荐、晚间回顾 | Server酱 API, launchd |
 | 🤝 **协作集成** | 飞书会议纪要、Action Items 追踪 | Feishu Open API |
+| 📓 **知识库** | Notion 双向同步、搜索、创建页面、查询数据库 | Notion API |
 
 ---
 
@@ -523,6 +525,22 @@ bash scripts/install.sh --uninstall # 卸载全部服务
 | 33 | `knowledge_graph_build` | 构建知识图谱 |
 | 34 | `knowledge_graph_query` | 查询知识图谱 |
 | 35 | `knowledge_graph_gaps` | 知识 Gap 检测 |
+
+</details>
+
+<details>
+<summary><b>Notion Server — 完整列表</b></summary>
+
+| # | Tool | 说明 |
+|---|------|------|
+| 1 | `notion_search` | 全文搜索页面和数据库 |
+| 2 | `notion_get_page` | 获取页面属性和完整内容 |
+| 3 | `notion_get_database` | 获取数据库结构和条目 |
+| 4 | `notion_create_page` | 创建新页面（支持 Markdown） |
+| 5 | `notion_update_page` | 追加内容到现有页面 |
+| 6 | `notion_list_databases` | 列出所有可访问的数据库 |
+| 7 | `notion_query_database` | 按条件查询数据库 |
+| 8 | `notion_list_pages` | 列出数据库或全部页面 |
 
 </details>
 

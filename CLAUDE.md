@@ -147,6 +147,17 @@ Core (恒久) → Stable (年级) → Evolving (月级) → Working (周级) →
 - `fetch_feishu_doc(doc_url)` — 拉取飞书文档内容
 - `get_feishu_config()` — 查看飞书配置状态
 
+### Notion Server
+Notion 知识库双向集成——搜索、读取、创建、查询：
+- `notion_search(query, filter_type)` — 全文搜索 Notion 页面和数据库
+- `notion_get_page(page_id)` — 获取页面完整内容（属性 + blocks 转 Markdown）
+- `notion_get_database(database_id)` — 获取数据库结构和条目
+- `notion_create_page(parent_id, title, content, parent_type, properties)` — 创建新页面（支持 Markdown 内容）
+- `notion_update_page(page_id, content)` — 追加内容到现有页面
+- `notion_list_databases()` — 列出所有可访问的数据库
+- `notion_query_database(database_id, filter_json, sort_json)` — 按条件查询数据库
+- `notion_list_pages(database_id)` — 列出页面（指定数据库或全部）
+
 ## Skills
 
 ### 数字分身核心
